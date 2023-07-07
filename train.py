@@ -34,6 +34,8 @@ def main(hparam):
         with open(result_path + "history.pkl", "rb") as f:
             history = pickle.load(f);
         utils.log("start", [hparam, T_start, False], result_path);
+
+    print("Results on", result_path);
     
     epoch = len(history["loss"]);
     model = Nerf(hparam, device, epoch);
