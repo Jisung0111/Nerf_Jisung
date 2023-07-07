@@ -36,6 +36,8 @@ python plot.py --result {result_num}
 
 You can check 200 samples from test set and evaluate lpips, psnr, ssim.
 
+(If you are still running the training code, I recommend you to generate new hyperparameter json file to avoid GPU memory shortage. Ex. Results/Result{result_num}/hparam_test.json {..., "gpu": "cuda:8", ...})
+
 <pre>
 python reviewer.py --hparam Results/Result{result_num}/hparam.json --test 1
 </pre>
@@ -47,6 +49,8 @@ Rendered images: "Results/Result{result_num}/Tested/"
 # Rendering
 
 You can generate a video.
+
+(If you are still running the training code, I recommend you to generate new hyperparameter json file to avoid GPU memory shortage. Ex. Results/Result{result_num}/hparam_render.json {..., "gpu": "cuda:9", ...})
 
 <pre>
 python reviewer.py --hparam Results/Result{result_num}/hparam.json --test 0
