@@ -28,6 +28,9 @@ Images from each evaluation: "Results/Result{result_num}/Samples/"
 
 You can plot graphs by entering following command.
 
+<pre>
+python plot.py --result {result_num}
+</pre>
 
 # Test
 
