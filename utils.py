@@ -91,7 +91,7 @@ def log(phase, args, result_path):
                     epoch, hms(time.time() - T_start), cors_loss, fine_loss, loss, time.time() - T_train));
     
     elif phase == "finish":
-        T_start, history = args;
+        history, T_start = args;
         best_lpips_idx, best_psnr_idx, best_ssim_idx = np.argmin(history["lpips"]), np.argmax(history["psnr"]), np.argmax(history["ssim"]);
         
         with open(result_path + "train_log. txt", 'a') as f:
